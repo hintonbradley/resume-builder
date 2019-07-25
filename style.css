@@ -1,0 +1,12 @@
+.cat-selected {
+    background: lightgreen;
+}
+
+.resume-builder li {
+    display: inline-block;
+}
+
+li, p, ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
