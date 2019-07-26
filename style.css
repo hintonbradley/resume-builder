@@ -10,3 +10,89 @@ li, p, ul {
     margin-top: 0;
     margin-bottom: 0;
 }
+
+.dflt-btn {
+    border: 2px solid black;
+    background: #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 3px;
+}
+
+.cat-selected {
+    background: lightgreen;
+
+}
+
+.txt-ctr {
+    text-align: center;
+}
+
+.color1 {
+    color: darkmagenta;
+}
+
+.bold-txt {
+    font-weight: bold;
+}
+
+p, .txt-sm, span>span {
+    /* font-family: sans-serif; */
+    font-size: 13px;
+}
+
+* {
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 20px;
+    margin: 0px;
+}
+
+.in-bl {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.strength-item {
+    list-style-type: none;
+}
+
+.mtb-sm {
+    margin: 5px 0;
+}
+
+.ml-sm {
+    margin-left: 5px;
+}
+
+.mr-sm {
+    margin-right: 5px;
+}
+
+.resume-builder {
+    position: fixed;
+    background: #fff
+}
+
+body {
+    background: #fff;
+}
+
+.resume, .other {
+    padding-top: 100px;
+}
+
+.resume {
+    width: 75%
+}
+
+.other {
+    width: 20%;
+    position: fixed;
+}
+
+ul#other-items {
+    list-style-type: none;
+}
