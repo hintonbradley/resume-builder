@@ -1,6 +1,6 @@
 const tasks = [
     {
-        location: ['Mobile-design','CSS-HTML','Responsiveness-Compatibility'],
+        location: ['Mobile-design','CSS-HTML','Responsive-Compatibility'],
         company: 'self',
         count: 0,
         text: 'Restructured frontend code to incorporate cross-browser compatibility and responsive design using Atomic CSS and semantic HTML, and created flexible and scalable prototypes for mobile apps.'
@@ -31,7 +31,7 @@ const tasks = [
         text: 'Appended Twilio API & leveraged Javascript to engineer a text alert system to notify users at each step of exchange for a time-banking system (à la TaskRabbit)'
     },
     {
-        location: ['Team-collaboration','UI-UX'],
+        location: ['Teams','UI-UX'],
         company: 'self',
         count: 0,
         text: 'Team with product managers & designers to develop front-end look & feel of user interfaces.'
@@ -47,32 +47,32 @@ const tasks = [
         location: ['other'],
         company: 'self',
         count: 0,
-        text: 'Utilize responsive/progressive design to build engaging apps.',
+        text: 'Utilize responsive / progressive design to build engaging apps.',
         other: true
     },
     {
-        location: ['Bug-reporting'],
+        location: ['Debug'],
         company: 'self',
         count: 0,
         text: 'Use Chrome Developer Tools to investigate and solve frontend deficiencies in performance, architecture, experience.'
     },
     {
-        location: ['Team-collaboration','Deadlines'],
+        location: ['Teams','Deadlines'],
         company: 'levi',
         count: 0,
         text: 'Engaged in daily stand-ups / weekly code reviews, updated teams daily and pushed multiple deployments weekly to meet strict deadlines.'
     },
     {
-        location: ['Responsiveness-Compatibility'],
+        location: ['Responsive-Compatibility'],
         company: 'self',
         count: 0,
         text: 'Ensure cross-browser compatibility, responsive design'
     },
     {
-        location: ['Component-based-reusable'],
+        location: ['Component-dev'],
         company: 'self',
         count: 0,
-        text: 'Developed reusable component-based UI apps.'
+        text: 'Designed and developed reusable component-based UI apps.'
     },
     {
         location: ['UI-UX','Frameworks-Libraries'],
@@ -99,7 +99,7 @@ const tasks = [
         text: 'Built, deployed campaigns 24/7 during 2017 holiday season to grow conversion rates to 9%+'
     },
     {
-        location: ['SEO-Marketing','Team-collaboration'],
+        location: ['SEO-Marketing','Teams'],
         company: 'levi',
         count: 0,
         text: 'Coordinate with Design & Marketing to execute daily ad campaigns/promotions as well as update pages to incorporate SEO best practices.'
@@ -155,13 +155,13 @@ const tasks = [
         text: "Migrated legacy code to Angular.js and linked frontend to Node/Express backend services."
     },
     {
-        location: ['Testing','Responsiveness-Compatibility'],
+        location: ['Testing','Responsive-Compatibility'],
         company: 'ludwig',
         count: 0,
         text: "Ensured all pages were comparable and functioned as intended on all devices and browsers."
     },
     {
-        location: ['Frameworks-Libraries','UI-UX','Component-based-reusable'],
+        location: ['Frameworks-Libraries','UI-UX','Component-dev'],
         company: 'ludwig',
         count: 0,
         text: "Developed new signup/login UI components and added client-side validation using Angular."
@@ -221,7 +221,7 @@ const tasks = [
         text: "Migrating front-end stacks to frameworks"
     },
     {
-        location: ['Responsiveness-Compatibility'],
+        location: ['Responsive-Compatibility'],
         company: 'strengths',
         count: 0,
         text: "Cross-browser / Cross-platform development & compatibility"
@@ -264,18 +264,61 @@ const tasks = [
         text: "ADA compliance, SEO, and site optimization best practices "
     },
     {
-        location: ['Team-collaboration'],
+        location: ['Teams'],
         company: 'strengths',
         count: 0,
         text: "Interpersonal skills in team environments"
+    },
+    {
+        location: ['API-REST', 'AJAX'],
+        company: 'self',
+        count: 0,
+        text: "Built APIs, added RESTful operations, 3rd-party APIs and asynchronous request handling to various apps."
+    },
+    {
+        location: ['Javascript','CSS-HTML','ADA'],
+        company: 'levi',
+        count: 0,
+        text: "Built out new home and landing pages by writing CSS (BEM system), symantic HTML and efficient Javascript, while addressing performance, scalability and accessibility concerns."
+    },
+    {
+        location: ['UI-UX','Libraries-Frameworks'],
+        company: 'ludwig',
+        count: 0,
+        text: "Developed dynamic, aesthetically-appealing dashboard components with Angular."
+    },
+    {
+        location: ['UI-UX'],
+        company: 'ludwig',
+        count: 0,
+        text: "Redesigned login and signup to enhance user-experience and optimization."
     }
 ];
 
+const categories = ['ADA','AJAX','API-REST','Backend','Debug','Component-dev','CSS-HTML','Deadlines','Frameworks-Libraries','Javascript','JSON','Mobile-design','PHP', 'OOP-Functional','Responsive-Compatibility','SEO-Marketing','Teams','Testing','UI-UX'];
 
-
-const categories = ['ADA','AJAX','API-REST','Backend','Bug-reporting','Component-based-reusable','CSS-HTML','Deadlines','Frameworks-Libraries','Javascript','JSON','Leadership-Ownership','Mobile-design','PHP', 'OOP-Functional','Responsiveness-Compatibility','SEO-Marketing','Team-collaboration','Testing','UI-UX'];
+const intro = {
+    beginning: ' with over 4 years experience leveraging ',
+    title: ['UI Developer','UI Engineer','Front End Developer','Front End Engineer','Web Developer','Full Stack Developer','Full Stack Engineer'],
+    technologies: ['Node','Angular','React','Vue','Mocha','jQuery','Bootstrap','LESS','CSS3','HTML5',],
+    tasks: ['to design, develop and test engaging components for high traffic apps','to create bold, engaging, high traffic apps and implementing relational databases','to create and optimize intuitive, efficient and cross-browser compatible pages/components','to create intuitive, reusable and efficient front-end components/UI'],
+    optional: [', who has experience in'],
+    tasksEnd: ' for high traffic apps'
+}
 
 const init = function () {
+    let title = document.getElementById('title');
+    for(let i=0; i<intro.title.length; i++) {
+        let html = '<option value="' + intro.title[i] + '">' + intro.title[i] + '</option>';
+        title.insertAdjacentHTML( 'beforeend', html );
+    }
+
+    let introTasks = document.getElementById('task')
+    for(let i=0; i<intro.tasks.length; i++) {
+        let html = '<option value="' + intro.tasks[i] + '">' + intro.tasks[i] + '</option>';
+        introTasks.insertAdjacentHTML( 'beforeend', html );
+    }
+
     let buttons = document.getElementById('cat-selectors');
     for(let i=0; i<categories.length; i++) {
         let html = '';
@@ -296,17 +339,68 @@ const init = function () {
     let city = document.getElementById('city');
     city.addEventListener("click", cityToggle);
 
+    let phone = document.getElementById('phone');
+    phone.addEventListener("click", phoneToggle);
+
+    let techAcumen = document.getElementById('tech-acumen');
+    techAcumen.addEventListener("click", techAcumenToggle);
+
+    let efficient = document.getElementById('efficiency');
+    efficient.addEventListener("click", efficiencyToggle);
+
+    let customer = document.getElementById('customer');
+    customer.addEventListener("click", customerToggle);
+
+    let endingTag = document.getElementById('endingTag');
+    endingTag.addEventListener("click", createIntro);
+    
+
     let other = document.getElementById('other-items');
     for (let i=0; i<tasks.length; i++) {
         if (tasks[i].other) {
-            let html = `<li id="` + tasks[i].id + `" class="dflt-tast">` + tasks[i].text + `</li>`;
+            let html = `<li id="` + tasks[i].id + `" class="dflt-task">` + tasks[i].text + `</li>`;
             other.insertAdjacentHTML( 'beforeend', html );
         }
     }
 
+    let otherItems = document.getElementById('other-items');
+    otherItems.addEventListener('click', otherSelection)
+
     addTask('javascript');
-    addTask('css-html')
+    addTask('css-html');
+    console.log(tasks[2]);
 };
+
+function filterTechs(tek) {
+    if (tek.checked) {
+        return tek.value;
+    }
+}
+
+const createIntro = function () {
+    let title = document.getElementById('title');
+    let task = document.getElementById('task');
+    let tag = document.getElementById('introTag');
+    let introField = document.getElementById('intro');
+    let techs = document.getElementsByClassName('introTech');
+    let newArr = [];
+    for (let i = 0; i<techs.length; i++) {
+        if(techs[i].checked) {
+            newArr.push(techs[i].value)
+        }
+    }
+    if (newArr.length>1) {
+        newArr.splice( newArr.length-1, 0, "and");
+    }
+    let html = title.options[title.selectedIndex].value + ' with over 4 years experience leveraging ' + newArr.join(' ') + ' ' + task.options[task.selectedIndex].value;
+    if (tag.value) {
+        html = html + intro.optional + ' ' + tag.value + '.';
+    } else {
+        html = html + '.'
+    }
+    html = html + '<p>&nbsp;</p>';
+    introField.innerHTML = html;
+}
 
 const emailToggle = function (e) {
     let myEmail = document.getElementById('myEmail');
@@ -314,6 +408,42 @@ const emailToggle = function (e) {
         myEmail.innerText='jmebradl@yahoo.com'
     } else {
         myEmail.innerText='hintonbradley@gmail.com';
+    }
+};
+
+const techAcumenToggle = function (e) {
+    let ta = document.getElementById('technical-acumen');
+    if (e.target.checked) {
+        ta.style.display = "block";
+    } else {
+        ta.style.display = "none";
+    }
+};
+
+const customerToggle = function (e) {
+    let cust = document.getElementById('customer-focused');
+    if (e.target.checked) {
+        cust.style.display = "block";
+    } else {
+        cust.style.display = "none";
+    }
+};
+
+const efficiencyToggle = function (e) {
+    let eff = document.getElementById('efficient');
+    if (e.target.checked) {
+        eff.style.display = "block";
+    } else {
+        eff.style.display = "none";
+    }
+};
+
+const phoneToggle = function (e) {
+    let myPhone = document.getElementById('myPhone');
+    if (e.target.checked) {
+        myPhone.innerHTML = '';
+    } else {
+        myPhone.innerHTML = '&nbsp; &#9670; &nbsp; 415-672-3193';
     }
 };
 
@@ -341,6 +471,41 @@ const catSelection = function (e) {
         }
     }
 };
+
+const otherSelection = function (e) {
+    if(e.target.nodeName==='LI') {
+        let add = e.target.classList.contains('other-selected');
+        if (!add) {
+            addOther(e.target.id);
+        } else {
+            removeOther(e.target.id);
+        }
+        e.target.classList.toggle('other-selected');
+    }
+}
+
+const addOther = function (id) {
+    console.log(id);
+    for(let i=0; i<tasks.length; i++) {
+        if (tasks[i].id===id) {
+            let html = '';
+            if (tasks[i].company === 'strengths') {
+                html = `<span id="res-item-` + tasks[i].id + `" class="res-item strength-item in-bl"><span class="txt-sm ">` + tasks[i].text + ` &#9670;&nbsp;</span></span>`;
+            } else {
+                html = `<li id="res-item-` + tasks[i].id + `" class="res-item"><p>` + tasks[i].text + `</p></li>`;
+            }
+            let company = document.getElementById(tasks[i].company.toLowerCase());
+            company.insertAdjacentHTML( 'beforeend', html );
+        }
+    }
+}
+
+const removeOther = function (id) {
+    console.log(id);
+    let item = document.getElementById('res-item-' + id);
+    item.remove();
+
+}
 
 const addTask = function (id) {
     console.log(id)

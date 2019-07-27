@@ -29,7 +29,7 @@ li, p, ul {
 }
 
 .color1 {
-    color: darkmagenta;
+    color: #4B0082;
 }
 
 .bold-txt {
@@ -71,9 +71,15 @@ h1 {
     margin-right: 5px;
 }
 
+.ml-sm {
+    margin-left: 20px;
+}
+
 .resume-builder {
     position: fixed;
-    background: #fff
+    background: #fff;
+    margin-top: -8px;
+    padding-top: 5px;
 }
 
 body {
@@ -81,11 +87,11 @@ body {
 }
 
 .resume, .other {
-    padding-top: 100px;
+    padding-top: 150px;
 }
 
 .resume {
-    width: 75%
+    width: 80%
 }
 
 .other {
@@ -95,4 +101,30 @@ body {
 
 ul#other-items {
     list-style-type: none;
+}
+
+.dflt-task {
+    font-size: 14px;
+    border: 2px solid black;
+    background: #ccc;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 5px 0;
+}
+
+.other-selected {
+    background: lightgreen;
+}
+
+.resume-builder {
+    z-index: 80;
+}
+
+.other {
+    z-index: 50;
+}
+
+nav {
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
 }

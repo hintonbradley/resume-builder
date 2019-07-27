@@ -8,61 +8,112 @@
     <title>Resume Creator</title>
 </head>
 <body>
-    <section class="resume-builder">
+    <nav class="resume-builder">
         <ul id="cat-selectors"></ul>
         <div class="txt-ctr">
-            <div class='in-bl mr-sm ml-sm'>
-                <label for="email">Yahoo email</label>
-                <input type="checkbox" id="email" name="email">
-            </div>
             <div class='in-bl ml-sm mr-sm'>
                 <label for="city">Napa address</label>
                 <input type="checkbox" id="city" name="city">
             </div>
+            <div class='in-bl ml-sm mr-sm'>
+                <label for="phone">No phone</label>
+                <input type="checkbox" id="phone" name="phone">
+            </div>
+            <div class='in-bl mr-sm ml-sm'>
+                <label for="email">Yahoo email</label>
+                <input type="checkbox" id="email" name="email">
+            </div>
+            <div class='in-bl mr-sm ml-sm'>
+                <label for="customer">Customer Focused</label>
+                <input type="checkbox" id="customer" name="customer" checked=true>
+            </div>
+            <div class='in-bl mr-sm ml-sm'>
+                <label for="tech-acumen">Tech. Acumen</label>
+                <input type="checkbox" id="tech-acumen" name="tech-acumen" checked=true>
+            </div>
+            <div class='in-bl mr-sm ml-sm'>
+                <label for="efficiency">Efficient</label>
+                <input type="checkbox" id="efficiency" name="efficiency" checked=true>
+            </div>
         </div>
-    </section>
+        <div>
+            <div>
+                <label class="ml-sm" for="node">Node</label>
+                <input type="checkbox" id="node" class="introTech" name="node" value="Node">
+                <label class="ml-sm" for="js">Javascript</label>
+                <input type="checkbox" id="js" checked=true class="introTech" name="js" value="Javascript (ES6)">
+                <label class="ml-sm" for="react">React</label>
+                <input type="checkbox" id="react" class="introTech" name="react" value="React">
+                <label class="ml-sm" for="angular">Angular</label>
+                <input type="checkbox" id="angular" class="introTech" name="angular" value="Angular">
+                <label class="ml-sm" for="vue">Vue</label>
+                <input type="checkbox" id="vue" class="introTech" name="vue" value="Vue">
+                <label class="ml-sm" for="api">API</label>
+                <input type="checkbox" id="api" class="introTech" name="api" value="RESTful APIs">
+                <label class="ml-sm" for="css">CSS3</label>
+                <input type="checkbox" id="css" class="introTech" name="css" value="CSS3">
+                <label class="ml-sm" for="html">HTML5</label>
+                <input type="checkbox" id="html" class="introTech" name="html" value="HTML5">
+            </div>
+            <ul id="introTitle" class="in-bl">
+                <select id="title" name="title"></select>
+            </ul>
+            <!-- <ul id="introTechs" class="in-bl"></ul> -->
+            <ul id="introTask" class="in-bl">
+                <select id="task" name="task">
+                </select>
+            </ul>
+            <div class='in-bl ml-sm mr-sm in-bl'>
+                <label for="introTag">Tag</label>
+                <input id="introTag" name="introTag" type="text">
+            </div>
+            <button id="endingTag" class="in-bl dflt-btn">Update</button>
+        </div>
+    </nav>
     <section class="resume in-bl">
         <h1 class="txt-ctr color1">JAMES BRADLEY</h1>
-        <p class="txt-ctr"><span id="myCity">San Francisco, CA 94116</span> &nbsp; &#9670; &nbsp; 415-672-3193 &nbsp; &#9670; &nbsp; <span id="myEmail">hintonbradley@gmail.com</span></p>  
+        <p class="txt-ctr"><span id="myCity">San Francisco, CA 94116</span> <span id="myPhone">&nbsp; &#9670; &nbsp; 415-672-3193</span> &nbsp; &#9670; &nbsp; <span id="myEmail">hintonbradley@gmail.com</span></p>  
         <p>&nbsp;</p>
+        <p id="intro"></p>
         <h1 class="txt-ctr color1">HIGHLIGHTS</h1>
-        <p><span class="bold-txt">Customer-Focused:</span> <span id="customer-focused"> At Levi Strauss & Co, grew conversion rates to 9%+ via dynamic campaigns. Hired as 1st front-end developer at Konversai to launch global knowledge-sharing platform. Optimized sites search engine optimization (SEO) and accessibility (ADA compliance).</span></p>
-        <p>&nbsp;</p>
-        <p><span class="bold-txt">Strong Technical Acumen:</span> <span id="technical-acumen"> Adept with JavaScript frameworks and libraries (Angular, React, Vue, jQuery, Bootstrap), CSS preprocessors (LESS, SASS), build tools and unit-testing.</span></p>
-        <p>&nbsp;</p>
-        <p><span class="bold-txt">Efficient:</span> <span id="efficient"> Efficient: Build reusable and flexible components that are easily able to adapt to changing conditions, and analyzed & optimized performance of web applications.</span></p>
+        <div id="customer-focused"><p><b>Customer-Focused:</b> Simplified company's sign-up process, allowing first 10K users to enroll quickly and efficiently. Optimized site's search engine optimization (SEO) and accessibility (ADA compliance).</p></div>
+        <div id="technical-acumen"><p>&nbsp;</p><p><span class="bold-txt">Strong Technical Acumen:</span> Adept with vanilla JavaScript as well as it’s frameworks and libraries (Angular, React, Vue, jQuery, Bootstrap), CSS preprocessors (LESS, SASS), build tools (Webpack), unit-testing (Mocha, Jasmine) and integrating web-services.</p></div>
+        <div id="efficient"><p>&nbsp;</p><p><b>Efficient:</b> <span id="efficient"> Build reusable and flexible components that are easily able to adapt to changing conditions, while debugging, analyzing & optimizing performance of web applications.</span></p></div>
         <p>&nbsp;</p>
         <h1 class="txt-ctr color1">SIGNATURE STRENGTHS</h1>
-        <div id="strengths" class="txt-ctr"></div>
+        <p id="strengths" class="txt-ctr"></p>
         <p>&nbsp;</p>
         <h1 class="txt-ctr color1">PROFESSIONAL EXPERIENCE</h1> 
         <div id="self-company" class="employer mtb-sm">
-            <p><u><b>Full Stack Developer, James Bradley, Developer;</b> San Francisco, CA; June 2015 – present</u></p>
+            <p><u><b>Freelance Developer, James Bradley:</b> San Francisco, CA; June 2015 – present</u></p>
+            <p>Manage lifecycle of ecommerce, web and mobile applications built with Node, Rails & PhoneGap.</p>
             <ul id="self"></ul>
-            <p>Technologies: Node, React, Redux, Mongo, Firebase, Axios, Bootstrap, ES6, Github, Git, AWS, Angular, Heroku, Webpack.</p>
+            <p><u>Technologies:</u> Node, React, Redux, Mongo, Firebase, Axios, Bootstrap, ES6, Github, Git, AWS, Angular, Heroku, Webpack.</p>
         </div>
         <p>&nbsp;</p>
         <div id="levi-company" class="employer mtb-sm">
             <p><u><b>UI Developer (Contract), Levi Strauss & Co;</b> San Francisco, CA; July 2017 – Dec. 2017</u></p>
+            <p>Served on a team building new Canadian Levi’s and Docker’s sites while managing U.S. and European sites.</p>
             <ul id="levi"></ul>
-            <p><b>Technologies:</b> Vue.js, ES6, Bootstrap, HTML5, CSS3, SAP Hybris, Grunt, Git, Github, Jira, Slack, Zeplin.</p> 
+            <p><u>Technologies:</u> Vue.js, ES6, Bootstrap, HTML5, CSS3, SAP Hybris, Grunt, Git, Github, Jira, Slack, Zeplin.</p> 
         </div>
         <p>&nbsp;</p>
         <div id="konversai-company" class="employer mtb-sm">
             <p><u><b>Front-End Developer (Contract), Konversai;</b> Los Altos, CA; July 2016 – May 2017</u></p>
+            <p>Hired as first front-end developer to help launch beta version of global knowledge-sharing platform.</p>
             <ul id="konversai"></ul>
-            <p><b>Technologies:</b> Javascript / jQuery, HTML5, CSS3, Node, Mocha, Jasmine, Photoshop.</p>
+            <p><u>Technologies:</u> Javascript / jQuery, HTML5, CSS3, Node, Mocha, Jasmine, Photoshop.</p>
         </div>
         <p>&nbsp;</p>
         <div id="konversai-company" class="employer">
             <p><u><b>Front-End Developer, Ludwig Multimedia;</b> San Francisco, CA; Nov. 2015 – Jan. 2016</u></p>
+            <p>Restructured the user interface of project management application.</p>
             <ul id="ludwig"></ul>
-            <p><b>Technologies:</b> Angular 1, Bootstrap, Coffeescript, Jade, Less, Node, Grunt, Github, PostgreSQL, Sketch.</p>
+            <p><u>Technologies:</u> Angular 1, Bootstrap, Coffeescript, Jade, Less, Node, Grunt, Github, PostgreSQL, Sketch.</p>
         </div>
         <p>&nbsp;</p>
-        <p>&nbsp;</p>
         <h1 class="txt-ctr color1">EDUCATION</h1>
-        <p><span class="bold-txt">Certificate, Web Development Immersive / Bootcamp, General Assembly;</span> San Francisco, CA; June 2015</p> <p><b>Bachelor of Music (BM), Composition, University of Redlands;</b> Redlands, CA</p>
+        <p><b>Certificate, Web Development Immersive</b>/ Bootcamp, General Assembly; San Francisco, CA; June 2015</p> <p>Bachelor of Music (BM), Composition, University of Redlands; Redlands, CA</p>
         <p>&nbsp;</p>
         <h1 class="txt-ctr color1">OTHER TECHNOLOGIES</h1>
         <p><span class="bold-txt">Frameworks:</span>Angular 1 /  2+; Express, Node, PhoneGap, Rails.  <span class="bold-txt">Libraries:</span> Axios, Bootstrap, jQuery, Moment.js, React, Redux, Vue.js.  <span class="bold-txt">Languages:</span> CoffeeScript, CSS3, HTML5, JavaScript (ES5 + ES6), Jade (Pug), PHP, Ruby.  <span class="bold-txt">Databases:</span> Firebase, MySQL, Mongo, Postgres.  <span class="bold-txt">Testing:</span> Jasmine, Mocha.  <span class="bold-txt">Preprocessers:</span>: Grunt, LESS. <span class="bold-txt">Other:</span> AJAX, Amazon Web Services (AWS), APIs, Bcrypt, Git, Github, Heroku, Jira, JSON, MEAN stack, RESTful web services, RegEx, SAP Hybris, SEO / SEM, Webpack.</span></p>
