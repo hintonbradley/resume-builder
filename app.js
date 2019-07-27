@@ -301,7 +301,13 @@ const intro = {
     beginning: ' with over 4 years experience leveraging ',
     title: ['UI Developer','UI Engineer','Front End Developer','Front End Engineer','Web Developer','Full Stack Developer','Full Stack Engineer'],
     technologies: ['Node','Angular','React','Vue','Mocha','jQuery','Bootstrap','LESS','CSS3','HTML5',],
-    tasks: ['to design, develop and test engaging components for high traffic apps','to create bold, engaging, high traffic apps and implementing relational databases','to create and optimize intuitive, efficient and cross-browser compatible pages/components','to create intuitive, reusable and efficient front-end components/UI'],
+    tasks: [
+        'to design, develop and test engaging components for high traffic apps','to create bold, engaging, high traffic apps and implementing relational databases',
+        'to create and optimize intuitive, efficient and cross-browser compatible pages/components',
+        'to create intuitive, reusable and efficient front-end components/UI',
+        'to create bold, engaging and responsive mobile and web apps',
+        'create interactive and customer-focused apps, who values communication and teamwork'
+    ],
     optional: [', who has experience in'],
     tasksEnd: ' for high traffic apps'
 }
