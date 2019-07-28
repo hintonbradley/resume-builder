@@ -1,5 +1,3 @@
-let name = "James Bradley";
-
 const tasks = [
     {
         location: ['Mobile-design','CSS-HTML','Responsive-Compatibility'],
